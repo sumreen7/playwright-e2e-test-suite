@@ -1,5 +1,7 @@
 # OpenWeatherMap API — Playwright E2E Test Suite
 
+![Playwright Tests](https://github.com/sumreen7/playwright-e2e-test-suite/actions/workflows/test.yml/badge.svg)
+
 A focused Playwright test suite validating the [OpenWeatherMap Current Weather API](https://openweathermap.org/current). Covers happy path responses, error handling, schema validation, data quality checks, and cross-city consistency.
 
 ## What's Tested
@@ -19,12 +21,26 @@ npm install
 npx playwright install
 ```
 
-Add your API key to `weather.test.ts`:
-```ts
-const API_KEY = "your_api_key_here";
+Set your API key as an environment variable:
+```bash
+export OPENWEATHER_API_KEY=your_api_key_here
+```
+
+Or create a `.env` file (never commit this):
+```
+OPENWEATHER_API_KEY=your_api_key_here
 ```
 
 Get a free key at [openweathermap.org](https://openweathermap.org/api).
+
+## CI/CD
+
+Tests run automatically on every push and pull request via GitHub Actions.
+
+To enable CI, add your API key as a GitHub secret:
+1. Go to your repo → **Settings** → **Secrets and variables** → **Actions**
+2. Click **New repository secret**
+3. Name: `OPENWEATHER_API_KEY`, Value: your API key
 
 ## Run Tests
 
@@ -37,6 +53,12 @@ npx playwright test
 - [Playwright](https://playwright.dev/) — test framework
 - TypeScript
 - OpenWeatherMap API (free tier)
+
+## Test Results
+
+![Test Results](test_results.png)
+
+7/7 tests passing — 910ms total run time.
 
 ## Why These Tests?
 
