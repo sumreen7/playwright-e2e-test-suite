@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const API_KEY = "b220dd67fdbd5e28296fbd2fc068bb37";
+const API_KEY = process.env.OPENWEATHER_API_KEY || "b220dd67fdbd5e28296fbd2fc068bb37";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 // Helper to build request URL

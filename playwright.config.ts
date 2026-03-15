@@ -5,5 +5,5 @@ export default defineConfig({
   use: {
     baseURL: "https://api.openweathermap.org",
   },
-  reporter: "list",
+  reporter: [["list"], ["html", { outputFolder: "playwright-report" }]],
 });
