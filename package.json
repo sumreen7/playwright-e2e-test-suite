@@ -1,0 +1,13 @@
+{
+  "name": "openweathermap-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright e2e test suite for OpenWeatherMap API",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright test --reporter=html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "typescript": "^5.0.0"
+  }
+}
