@@ -57,7 +57,6 @@ npx playwright test
 ## Test Results
 
 ![Test Results](test_results.png)
-
 7/7 tests passing — 910ms total run time.
 
 ## Why These Tests?
